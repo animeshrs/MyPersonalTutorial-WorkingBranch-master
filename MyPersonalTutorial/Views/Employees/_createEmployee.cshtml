@@ -1,0 +1,53 @@
+﻿<div class="modal fade" id="createEmployeeModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="pull-right" aria-hidden="true" data-dismiss="modal">&times;</span>
+                <h4>Create</h4>
+            </div>
+            <div class="modal-body">
+                @using (Html.BeginForm(null, null, FormMethod.Post, new { id = "createEmployeeForm" }))
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <label>Name</label>
+                                <input class="form-control" type="text" name="Name" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <label>Title</label>
+                                <input class="form-control" type="text" name="Title" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <label>Position</label>
+                                <input class="form-control" type="text" name="TitleOfCourtesy" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <label>Birth Date</label>
+                                <input class="form-control" type="date" name="BirthDate" />
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="modal-footer">
+                <input type="button" value="Create" id="btn-create-save" />
+            </div>
+        </div>
+    </div>
+</div>

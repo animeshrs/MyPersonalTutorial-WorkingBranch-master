@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<body>
+    <table class="table table-bordered table-hover table-striped" id="tblEmployees">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Birth Date</th>
+                <th>
+                    <input type="button" id="btn-create" value="Create" />
+                </th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    @Html.Partial("_createEmployee")
+</body>
+
+@section scripts{
+    <script type="text/javascript">
+        require(['views/Employee/index'], function (page) {
+            page.initialize();
+        });
+    </script>
+}
+
