@@ -13,7 +13,7 @@ namespace MyPersonalTutorial.ModelBuilders
 
         public SupplierModelBuilder()
         {
-            _supplierService = new SupplierService();
+            _supplierService = SupplierService.GetInstance;
         }
 
         public List<SupplierViewModel> GetSupplierList()
