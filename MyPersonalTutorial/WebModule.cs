@@ -14,6 +14,8 @@ namespace MyPersonalTutorial
         public override void Load()
         {
             Bind<IEmployeeModelBuilder>().To<EmployeeModelBuilder>().InRequestScope();
+
+            Bind<ISupplierModelBuilder>().To<SupplierModelBuilder>().InRequestScope();
         }
     }
 }

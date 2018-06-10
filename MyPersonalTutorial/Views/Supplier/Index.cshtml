@@ -3,5 +3,58 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Suppliers</h2>
+
+<body ng-app="myApp" ng-controller="myController">
+        <div style="text-align:right;">
+            Search:
+            <input type="text" ng-model="searchString" />
+        </div>
+        <br />
+
+        <div>
+            <table id="tblSupplier" class="table table-bordered table-hover table-striped">
+                <thead style="cursor:pointer;">
+                    <tr>
+                        <th ng-repeat="header in headers" ng-click="orderByColumn(header.name)">{{header.val}}</th>
+                    </tr>
+                </thead>
+                <tbody ng-repeat="supplier in suppliers | filter:searchString | orderBy:sortColumn:true">
+                    <tr ng-attr-supplierId="{{supplier.SupplierId}}" ng-click="test(supplier)">
+                        <td>{{supplier.CompanyName}}</td>
+                        <td>{{supplier.ContactName}}</td>
+                        <td>{{supplier.ContactTitle}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="supplierModal" class="modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header2">
+                        <h3>Supplier Details</h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            Company Name
+                            <input type="text" ng-model="companyName" />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-default" data-dismiss="modal">
+                            <span class="glyphicon glyphicon-remove">Close</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+
+@section scripts{
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/app/views/Supplier/index.js"></script>
+
+}
 
