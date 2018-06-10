@@ -265,7 +265,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\amplify.js" />
     <Content Include="Scripts\angular.js" />
-    <Content Include="Scripts\app\knockout-3.4.2.js" />
+    <Content Include="Scripts\knockout-3.4.2.js" />
     <Content Include="Scripts\app\mediator\channels.js" />
     <Content Include="Scripts\app\mediator\mediator.js" />
     <Content Include="Scripts\app\requireConfig.js" />

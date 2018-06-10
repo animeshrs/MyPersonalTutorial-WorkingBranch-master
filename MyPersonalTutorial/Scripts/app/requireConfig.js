@@ -9,6 +9,7 @@
         /* Libraries */
         jquery: 'jquery-1.10.2',
         knockout: 'knockout-3.4.2',
-        amplify:'amplify'
+        amplify: 'amplify',
+        angular: 'angular'
     }
 });
