@@ -10,6 +10,6 @@
         jquery: 'jquery-1.10.2',
         knockout: 'knockout-3.4.2',
         amplify: 'amplify',
-        angular: 'angular'
+        angular: 'angular',
     }
 });
